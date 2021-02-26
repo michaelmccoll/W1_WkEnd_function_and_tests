@@ -1,4 +1,10 @@
 # WRITE YOUR FUNCTIONS HERE
+# LISTS in Pet Shop
+# customers = [{"name","pets","cash"},{"name","pets","cash"},{"name","pets","cash"}]
+# new_pet = {"name","pet type","breed","price"}
+# cc_pet_shop = [{"pets":{"name","pet type","breed","price"},
+#                "admin":{"total_cash","pets_sold"},
+#                "name":}]
 
 # Test 1 (test_pet_shop_name)  "Camelot of Pets"
 print(" ")
