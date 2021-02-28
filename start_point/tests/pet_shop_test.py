@@ -75,39 +75,40 @@ class TestPetShop(unittest.TestCase):
             "name": "Camelot of Pets"
         }
 
+    # <<< Test 1 WORKING >>>
     def test_pet_shop_name(self):
         name = get_pet_shop_name(self.cc_pet_shop)
         self.assertEqual("Camelot of Pets", name)
-
-    @unittest.skip("delete this line to run the test")
+    
+    # <<< Test 2 WORKING >>>
     def test_total_cash(self):
         sum = get_total_cash(self.cc_pet_shop)
         self.assertEqual(1000, sum)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 3 WORKING >>>
     def test_add_or_remove_cash__add(self):
         add_or_remove_cash(self.cc_pet_shop,10)
         cash = get_total_cash(self.cc_pet_shop)
         self.assertEqual(1010, cash)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 4 WORKING >>>
     def test_add_or_remove_cash__remove(self):
         add_or_remove_cash(self.cc_pet_shop,-10)
         cash = get_total_cash(self.cc_pet_shop)
         self.assertEqual(990, cash)
-
-    @unittest.skip("delete this line to run the test")
+    
+    # <<< Test 5 WORKING >>>
     def test_pets_sold(self):
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(0, sold)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 6 WORKING >>>
     def test_increase_pets_sold(self):
         increase_pets_sold(self.cc_pet_shop,2)
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(2, sold)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 7 WORKING >>>
     def test_stock_count(self):
         count = get_stock_count(self.cc_pet_shop)
         self.assertEqual(6, count)
@@ -138,18 +139,18 @@ class TestPetShop(unittest.TestCase):
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
         self.assertIsNone(pet)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 13 WORKING >>>
     def test_add_pet_to_stock(self):
         add_pet_to_stock(self.cc_pet_shop, self.new_pet)
         count = get_stock_count(self.cc_pet_shop)
         self.assertEqual(7, count)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 14 WORKING >>>
     def test_customer_cash(self):
         cash = get_customer_cash(self.customers[0])
         self.assertEqual(1000, cash)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 15 WORKING >>>
     def test_remove_customer_cash(self):
         customer = self.customers[0]
         remove_customer_cash(customer, 100)
@@ -168,19 +169,19 @@ class TestPetShop(unittest.TestCase):
 
     # --- OPTIONAL ---
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 18 WORKING >>>
     def test_customer_can_afford_pet__sufficient_funds(self):
         customer = self.customers[0]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
         self.assertEqual(True, can_buy_pet)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 19 WORKING >>>
     def test_customer_can_afford_pet__insufficient_funds(self):
         customer = self.customers[1]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
         self.assertEqual(False, can_buy_pet)
 
-    @unittest.skip("delete this line to run the test")
+    # <<< Test 20 WORKING >>>
     def test_customer_can_afford_pet__exact_funds(self):
         customer = self.customers[2]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
