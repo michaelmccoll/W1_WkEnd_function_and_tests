@@ -31,29 +31,29 @@ def increase_pets_sold(list,add_sold):
 def get_stock_count(list):
     return len(list["pets"])
 
-# # Test 8 (test_all_pets_by_breed__found) !!!NOT WORKING!!!   the count should equal 2
-# # Test 9 (test_all_pets_by_breed__not_found)  !!!NOT WORKING!!!   the count should equal 0
+# # Test 8 (test_all_pets_by_breed__found)
+# # Test 9 (test_all_pets_by_breed__not_found)
 
 def get_pets_by_breed(list,breed_name):
     count_breeds = []
-    for pets in list:
-        if list["pets"]["breed"] == breed_name:
-            count_breeds.append(pets)
-            return count_breeds
+    for pet in list["pets"]:
+        if pet["breed"] == breed_name:
+            count_breeds.append(pet)
+    return count_breeds
 
 # # Test 10 (test_find_pet_by_name__returns_pet)  !!!ALMOST WORKING, ERRORS!!!
-# # Test 11 (test_find_pet_by_name__returns_None)  !!!ALMOST WORKING, ERRORS!!!
+# # Test 11 (test_find_pet_by_name__returns_None)
 
 def find_pet_by_name(list,pet_name):
-    if list["pets"]["name"] == pet_name:
-        return pet_name
-    else:
-        return None
+    for pet in list["pets"]:
+        if list["name"] == pet_name:
+            return pet_name
+    else: None
 
 # # Test 12 (test_remove_pet_by_name)  !!!NOT WORKING, ERRORS!!!
 
-def remove_pet_by_name(list,pet_name):
-    list["pets"]["name"].remove(pet_name)
+# def remove_pet_by_name(list,pet_name):
+#     list["pets"]["name"].remove(pet_name)
 
 # # Test 13 (test_add_pet_to_stock)
 
@@ -91,13 +91,13 @@ def customer_can_afford_pet(cust_name, new_pet):
 # INTEGRATION TESTS
 # Test 21, 22, 23
 
-def sell_pet_to_customer(list,pet,customer):
-    get_customer_pet_count(customer)
-    get_pets_sold(list)
-    get_customer_cash(customer)
-    get_total_cash(list)
+# def sell_pet_to_customer(list,pet,customer):
+#     get_customer_pet_count(customer)
+#     get_pets_sold(list)
+#     get_customer_cash(customer)
+#     get_total_cash(list)
 
 # (find_pet_by_name) isn't working yet
 
-# 15 Tests working: 1, 2, 3, 4, 5, 6, 7, 13, 14, 15, 16, 17, 18, 19, 20
-# 8 Tests not working: 8, 9, 10, 11, 12, 21, 22, 23
+# 18 Tests working.
+# 5 Tests not working: 11, 12, 21, 22, 23
